@@ -1,8 +1,113 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 <head>
-  <title>Testing Woe</title>
-</head>
+<title>Who Tao !?</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
 
+* {box-sizing: border-box;}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Style the header */
+.header {
+  background-color:;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+}
+
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: center
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #009688;
+}
+
+.container:hover .overlay {
+  opacity: 0.7;
+}
+
+.text {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Who Tao!?</h2>
+</div>
+
+<div class="row">
+  <div class="column"></div>
+  <div class="column">
+    <div class="container">
+      <img src="img/1604471551432.jpg" alt="" class="image">
+      <div class="overlay">
+        <div class="text" >
+        <a role="button" href="CV.html">Found me !! XD</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column"></div>
+</div>
+
+</body>
 </html>
+
